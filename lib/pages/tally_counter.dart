@@ -45,16 +45,25 @@ class tally_counter extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red
+                  ),
                     onPressed: () {
                       myController.decrement();
                     },
                     child: Icon(Icons.remove)),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey
+                  ),
                     onPressed: () {
                       myController.reset();
                     },
                     child: Icon(Icons.restart_alt)),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.lightGreen
+                  ),
                     onPressed: () {
                       myController.increment();
                     },
