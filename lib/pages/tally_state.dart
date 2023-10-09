@@ -18,7 +18,7 @@ class tally_state extends StatelessWidget {
           children: [
             //obx untuk reactive
             /*Obx(() => Text(
-                  "${tallyC.value}",
+                  "${tallyC.data}",
                   style: TextStyle(fontSize: 72, fontWeight: FontWeight.bold),
                 )),
             ElevatedButton(
@@ -35,7 +35,7 @@ class tally_state extends StatelessWidget {
 
             GetBuilder<tally_controller>(
                 builder: (controller) => Text(
-                      "${controller.value}",
+                      "${controller.data}",
                       style:
                           TextStyle(fontSize: 72, fontWeight: FontWeight.bold),
                     )),

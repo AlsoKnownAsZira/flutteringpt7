@@ -7,16 +7,16 @@ class tally_controller extends GetxController {
   void decrement() => value--;
 */
 // simple state, update manual, bisa juga auto jika ditambah update()
-  int value = 0;
+  int data = 0;
   void increment() {
-    value++;
+    data++;
     // update jika ingin auto
     //update();
   }
 
   void decrement() {
-    if (value > 0) {
-      value--;
+    if (data > 0) {
+      data--;
     }
   }
 
