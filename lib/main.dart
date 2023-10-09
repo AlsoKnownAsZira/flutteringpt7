@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutteringpt7/pages/dialog_snackbar.dart';
 import 'package:flutteringpt7/pages/tally_counter.dart';
+import 'package:flutteringpt7/pages/tally_state.dart';
 import 'package:get/get.dart';
 void main() {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: dialog_snackbar(),
+      home: tally_state(),
     );
   }
 }

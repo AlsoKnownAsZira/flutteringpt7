@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class tallyController extends GetxController {
+  //obs = observe (data akan dipantau sehingga bisa digunakan)
+  // semua yang ada di sini custom, jadi bisa buat func sesuai kebutuhan
   var data = 0.obs;
   increment() {
     data += 1;
@@ -30,6 +32,7 @@ class tally_counter extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            //yang didalam obx hanya yang direfresh tiap saat
             Obx(
               () {
                 return Text(
