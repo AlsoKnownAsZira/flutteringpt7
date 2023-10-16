@@ -101,53 +101,67 @@ class reactive_types extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Obx(() => Text("${reactC.dataList}")),
-              Row(
-                children: [
-                  ElevatedButton(
-                      onPressed: () {
-                        reactC.tambahAngkaList();
-                      },
-                      child: Text("Tambah Angka")),
-                  ElevatedButton(
-                      onPressed: () {
-                        reactC.ubahId0();
-                      },
-                      child: Text("Ubah Id 0"))
-                ],
-              )
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Obx(() => Text("${reactC.dataList}")),
+                SizedBox(
+                  width: 20,
+                ),
+                Row(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          reactC.tambahAngkaList();
+                        },
+                        child: Text("Tambah Angka")),
+                    ElevatedButton(
+                        onPressed: () {
+                          reactC.ubahId0();
+                        },
+                        child: Text("Ubah Id 0"))
+                  ],
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          SingleChildScrollView(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Obx(() => Text("${reactC.dataSet}")),
+                SizedBox(
+                  width: 20,
+                ),
+                Row(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          reactC.tambahAngkaSet();
+                        },
+                        child: Text("Tambah Set")),
+                    ElevatedButton(
+                        onPressed: () {
+                          reactC.ubahDataSet();
+                        },
+                        child: Text("Ubah Data Set"))
+                  ],
+                )
+              ],
+            ),
           ),
           SizedBox(
             height: 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Obx(() => Text("${reactC.dataSet}")),
-              Row(
-                children: [
-                  ElevatedButton(
-                      onPressed: () {
-                        reactC.tambahAngkaSet();
-                      },
-                      child: Text("Tambah Set")),
-                  ElevatedButton(
-                      onPressed: () {
-                        reactC.ubahDataSet();
-                      },
-                      child: Text("Ubah Data Set"))
-                ],
-              )
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Row(
             children: [
               Expanded(
                   child: Obx(
@@ -157,11 +171,29 @@ class reactive_types extends StatelessWidget {
                   subtitle: Text("${reactC.dataMap['umur']} Tahun"),
                 ),
               )),
-              ElevatedButton(
-                  onPressed: () {
-                    reactC.gantiNama();
-                  },
-                  child:Text("Ganti Nama Zira"))
+              Row(
+                children: [
+                  ElevatedButton(
+                      onPressed: () {
+                        reactC.gantiNama();
+                      },
+                      child: Text("Ganti Nama Zira")),
+                  Column(
+                    children: [
+                      ElevatedButton(
+                          onPressed: () {
+                            reactC.addUmur();
+                          },
+                          child: Text("Tambah Umur")),
+                      ElevatedButton(
+                          onPressed: () {
+                            reactC.kurangUmur();
+                          },
+                          child: Text("Kurang Umur")),
+                    ],
+                  )
+                ],
+              )
             ],
           )
         ],

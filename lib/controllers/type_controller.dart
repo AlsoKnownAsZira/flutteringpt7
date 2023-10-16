@@ -61,6 +61,20 @@ class type_controller extends GetxController {
   }.obs;
 
   void gantiNama() {
-    dataMap['nama'] = "Bukan Zira";
+    if (dataMap['nama'] == "Bukan Zira") {
+      dataMap['nama'] = "Zira";
+    } else {
+      dataMap['nama'] = "Bukan Zira";
+    }
+  }
+
+  void addUmur() {
+    dataMap['umur']++;
+  }
+
+  void kurangUmur() {
+    if (dataMap['umur'] > 17) {
+      dataMap['umur']--;
+    }
   }
 }
